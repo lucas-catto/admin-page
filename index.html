@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sidebar Responsiva com Bootstrap 5</title>
+        <style>
+            nav::-webkit-scrollbar{width:0;height:0;}
+        </style>
+        <!-- CSS do Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>    
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <div class="accordion d-flex flex-column justify-content-between gap-2 h-100" id="accordionPanelsStayOpenExample">
+                    <div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Menu 01
+                                </button>
+                            </h2>
+                            <!-- -->
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                                <div class="p-2 accordion-body d-flex flex-column gap-2">
+                                    <!-- -->
+                                    <button class="btn btn-primary">Botão 01</button>
+                                    <button class="btn btn-primary">Botão 02</button>
+                                    <button class="btn btn-primary">Botão 03</button>
+                                    <button class="btn btn-primary">Botão 04</button>
+                                    <!-- -->
+                                </div>
+                            </div>
+                            <!-- -->
+                        </div>
+                        <!-- -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                    Menu 02
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="p-2 accordion-body d-flex flex-column gap-2">
+                                    <!-- -->
+                                    <button class="btn btn-primary">Botão 01</button>
+                                    <button class="btn btn-primary">Botão 02</button>
+                                    <button class="btn btn-primary">Botão 03</button>
+                                    <button class="btn btn-primary">Botão 04</button>
+                                    <!-- -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-headingTree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTree" aria-expanded="true" aria-controls="panelsStayOpen-collapseTree">
+                                    Menu 03
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTree">
+                                <div class="p-2 accordion-body d-flex flex-column gap-2">
+                                    <!-- -->
+                                    <button class="btn btn-primary">Botão 01</button>
+                                    <button class="btn btn-primary">Botão 02</button>
+                                    <button class="btn btn-primary">Botão 03</button>
+                                    <button class="btn btn-primary">Botão 04</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="btn-group dropup">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </button>
+
+                        <ul class="dropdown-menu text-center w-100">
+                            <li><a class="dropdown-item border-bottom border-top" href="#">Opção 1</a></li>
+                            <li><a class="dropdown-item border-bottom" href="#">Opção 2</a></li>
+                            <li><a class="dropdown-item border-bottom" href="#">Opção 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Layout principal usando grid do Bootstrap -->
+        <div class="container-fluid min-vh-100">
+            <div class="row min-vh-100">
+                <nav class="p-2 col-lg-2 d-none d-lg-block bg-light">
+                    <!-- -->
+                    <div class="accordion d-flex flex-column justify-content-between gap-2 h-100" id="accordionPanelsStayOpenExample">
+                        <div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                        Menu 01
+                                    </button>
+                                </h2>
+                                <!-- -->
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="p-2 accordion-body d-flex flex-column gap-2">
+                                        <!-- -->
+                                        <button class="btn btn-primary">Botão 01</button>
+                                        <button class="btn btn-primary">Botão 02</button>
+                                        <button class="btn btn-primary">Botão 03</button>
+                                        <button class="btn btn-primary">Botão 04</button>
+                                        <!-- -->
+                                    </div>
+                                </div>
+                                <!-- -->
+                            </div>
+                            <!-- -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                        Menu 02
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="p-2 accordion-body d-flex flex-column gap-2">
+                                        <!-- -->
+                                        <button class="btn btn-primary">Botão 01</button>
+                                        <button class="btn btn-primary">Botão 02</button>
+                                        <button class="btn btn-primary">Botão 03</button>
+                                        <button class="btn btn-primary">Botão 04</button>
+                                        <!-- -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTree" aria-expanded="true" aria-controls="panelsStayOpen-collapseTree">
+                                        Menu 03
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTree">
+                                    <div class="p-2 accordion-body d-flex flex-column gap-2">
+                                        <!-- -->
+                                        <button class="btn btn-primary">Botão 01</button>
+                                        <button class="btn btn-primary">Botão 02</button>
+                                        <button class="btn btn-primary">Botão 03</button>
+                                        <button class="btn btn-primary">Botão 04</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- -->
+
+                        <div class="btn-group dropup">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu
+                            </button>
+    
+                            <ul class="dropdown-menu text-center w-100">
+                                <li><a class="dropdown-item border-bottom border-top" href="#">Opção 1</a></li>
+                                <li><a class="dropdown-item border-bottom" href="#">Opção 2</a></li>
+                                <li><a class="dropdown-item border-bottom" href="#">Opção 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- -->
+
+                </nav>
+                    
+                <main class="col-lg-10 p-0 d-flex flex-column justify-content-between">
+                    <nav class="p-2 navbar navbar-expand-lg bg-primary d-flex justify-content-between">
+                        
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" style="background-color: #edfaee;">
+                                Menu
+                            </button>
+
+                            <a class="navbar-brand" href="#">Empresa</a>
+                        </div>
+                        
+                        <!-- 
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+                        -->
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #edfaee;">
+                                user
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <nav class="m-2 mb-0 d-flex justify-content-evenly flex-nowrap gap-2 overflow-auto" style="overflow-y:auto;" id="nav">
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 01</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 02</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 03</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 04</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 05</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 06</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 07</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 08</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 09</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 10</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 11</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 12</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 13</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 14</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 15</button>
+                        <button class="btn btn-primary flex-shrink-0 flex-grow-1">Botão 16</button>
+                    </nav>
+
+                    <!-- -->
+
+                    <div class="m-2 p-2 border rounded-3 bg-light" style="flex:1;">
+
+                        <!-- PAGE CONTENT -->
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const nav = document.getElementById("nav");
+ 
+            nav.addEventListener("wheel", (event) => {
+                event.preventDefault(); // Stop default scroll (Y)
+                // Change scroll in Y to X
+                nav.scrollLeft -= event.deltaY;
+            }, { // Allow use preventDefault in listener
+                passive: false
+            });
+         </script>
+    </body>
+</html>
